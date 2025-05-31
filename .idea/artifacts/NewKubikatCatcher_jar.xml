@@ -1,0 +1,18 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="NewKubikatCatcher:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/NewKubikatCatcher_jar</output-path>
+    <root id="archive" name="NewKubikatCatcher.jar">
+      <element id="module-output" name="NewKubikatCatcher" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/me/friwi/jcefmaven/135.0.20/jcefmaven-135.0.20.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/me/friwi/jogl-all/v2.4.0-rc-20210111/jogl-all-v2.4.0-rc-20210111.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/google/errorprone/error_prone_annotations/2.27.0/error_prone_annotations-2.27.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/commons-io/commons-io/2.16.1/commons-io-2.16.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/me/friwi/gluegen-rt/v2.4.0-rc-20210111/gluegen-rt-v2.4.0-rc-20210111.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/commons-codec/commons-codec/1.17.1/commons-codec-1.17.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/me/friwi/jcef-api/jcef-ca49ada+cef-135.0.20+ge7de5c3+chromium-135.0.7049.85/jcef-api-jcef-ca49ada+cef-135.0.20+ge7de5c3+chromium-135.0.7049.85.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/commons/commons-compress/1.27.1/commons-compress-1.27.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.16.0/commons-lang3-3.16.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.11.0/gson-2.11.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
