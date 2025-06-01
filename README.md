@@ -1,4 +1,4 @@
-# NewKubikatCatcherAdd
+# NewKubikatCatcher
 ## About
 An automatic RIS downloader for new version of Kubikat, created by SORAMI Miyabitama, under the MIT License.
 This program is only valid for amd64 device with Windows 7 or upper.
