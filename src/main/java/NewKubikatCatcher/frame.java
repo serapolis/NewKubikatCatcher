@@ -15,10 +15,10 @@ public class frame {
     public static JProgressBar progressBar;
     public static String projectName = "";
 
-    public frame(SearchBrowserObject searchBrowserObj){
-        createJFrame(searchBrowserObj);
+    public frame(browserObject browserObj){
+        createJFrame(browserObj);
     }
-    private static void createJFrame(SearchBrowserObject searchBrowserObj){
+    private static void createJFrame(browserObject browserObj){
 
         frame = new JFrame();
         mainPanel = new JPanel();
@@ -39,7 +39,7 @@ public class frame {
         nameProjectButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 projectName = JOptionPane.showInputDialog(frame, "Please provide with the name of the project:", "Name the project", JOptionPane.PLAIN_MESSAGE);
-                System.out.println(projectName);
+                System.out.println("[NKC-Java][INFO]项目名称已设置： " + projectName);
                 if (!projectName.matches("^[a-zA-Z0-9]+$")){
                     JOptionPane.showMessageDialog(frame, "You should set the name of the project with only Arabic numbers and English letters.", "Error", JOptionPane.ERROR_MESSAGE);
                     projectName = "";
@@ -67,8 +67,7 @@ public class frame {
                 URLField.setEnabled(false);
                 JOptionPane.showMessageDialog(frame, "The search will start, and I will downloading RIS files and combine them after the search.", "Info", JOptionPane.PLAIN_MESSAGE);
                 progressBar.setIndeterminate(true);
-                progressBar.setString("Searching");
-                searchBrowserObj.runSearch(URL, projectName);
+                browserObj.runSearch(URL, projectName);
             }
         });
         menuList.add(runButton);
@@ -76,7 +75,7 @@ public class frame {
         JMenuItem aboutButton = new JMenuItem("About");
         aboutButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(frame, "NewKubikatCatcher, by SORAMI Miyabitama, which is under the MIT license, adopting those open-sourse softweres:\nOpenJDK\nJCEF", "About", JOptionPane.PLAIN_MESSAGE);
+                JOptionPane.showMessageDialog(frame, "NewKubikatCatcher, by SORAMI Miyabitama, which is under the MIT license, adopting those open-sourse softweres:\nOpenJDK\nJCEF\nJSON-java", "About", JOptionPane.PLAIN_MESSAGE);
             }
         });
         menuList.add(aboutButton);
@@ -93,7 +92,7 @@ public class frame {
         frame.setContentPane(mainPanel);
         mainPanel.setLayout(new BorderLayout(0, 0));
 
-        frame.getContentPane().add(searchBrowserObj.browser.getUIComponent(), BorderLayout.CENTER);
+        frame.getContentPane().add(browserObj.cefBrowser.getUIComponent(), BorderLayout.CENTER);
 
         progressBar = new JProgressBar();
         progressBar.setString("Waiting");
