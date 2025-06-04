@@ -26,6 +26,8 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 public class browserObject {
     private static CefApp cefApp;
@@ -108,7 +110,11 @@ public class browserObject {
                     }
                     if (message.contains("[PROGRESS]")){
                         JSONObject progressObj = new JSONObject(message.substring("[NKC-Javascript-uni][PROGRESS]".length()));
-                        frame.progressBar.setString("Catching(Page now processing/Total pages): " + progressObj.getInt("page") + "/" + progressObj.getInt("totalPages"));
+                        if (progressObj.getInt("totalPages") == 0){
+                            frame.progressBar.setString("Catching(Page now processing/Total pages): " + progressObj.getInt("page") + "/--");
+                        }else{
+                            frame.progressBar.setString("Catching(Page now processing/Total pages): " + progressObj.getInt("page") + "/" + progressObj.getInt("totalPages"));
+                        }
                     }
                     if(message.contains("[COMPLETE]")){
                         generateFinalRISFile();
@@ -124,6 +130,7 @@ public class browserObject {
             @Override
             public void run() {
                 String finalRISFileContent = String.join("", risFiles);
+                finalRISFileContent = finalRISFileContent.lines().filter(line -> Pattern.compile("^[A-Z0-9]{2}  -.*").matcher(line).matches()).map(line -> Pattern.compile("\\\\[nrtbf\\\\\"']").matcher(line).replaceAll("")).collect(Collectors.joining("\n"));
                 String jarDir;
                 try {
                     jarDir = new File(browserObject.class.getProtectionDomain().getCodeSource().getLocation().toURI()).getParent();

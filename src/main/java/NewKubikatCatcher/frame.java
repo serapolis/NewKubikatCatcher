@@ -27,7 +27,7 @@ public class frame {
         frame.setTitle("NewKubikatCatcher");
         frame.setResizable(false);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setBounds(100, 100, 720, 445);
+        frame.setBounds(100, 100, 1000, 618);
 
         JMenuBar menuBar = new JMenuBar();
         frame.setJMenuBar(menuBar);
@@ -78,6 +78,7 @@ public class frame {
                 JOptionPane.showMessageDialog(frame, "NewKubikatCatcher(V1.4), by SORAMI Miyabitama, \nwhich is under the MIT license, adopting those open-sourse softweres:\nOpenJDK\nJCEF\nJSON-java", "About", JOptionPane.PLAIN_MESSAGE);
             }
         });
+
         menuList.add(aboutButton);
 
         URLField = new JTextField();
