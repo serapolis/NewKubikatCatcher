@@ -75,7 +75,7 @@ public class frame {
         JMenuItem aboutButton = new JMenuItem("About");
         aboutButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(frame, "NewKubikatCatcher, by SORAMI Miyabitama, which is under the MIT license, adopting those open-sourse softweres:\nOpenJDK\nJCEF\nJSON-java", "About", JOptionPane.PLAIN_MESSAGE);
+                JOptionPane.showMessageDialog(frame, "NewKubikatCatcher(V1.4), by SORAMI Miyabitama, \nwhich is under the MIT license, adopting those open-sourse softweres:\nOpenJDK\nJCEF\nJSON-java", "About", JOptionPane.PLAIN_MESSAGE);
             }
         });
         menuList.add(aboutButton);

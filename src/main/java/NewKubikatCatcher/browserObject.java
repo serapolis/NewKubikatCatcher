@@ -96,7 +96,7 @@ public class browserObject {
              */
             @Override
             public boolean onConsoleMessage(CefBrowser browser, CefSettings.LogSeverity level, String message, String source, int line) {
-                if (message.contains("[NKC-Javascript-uni]")){
+                if (message.contains("[NKC-Javascript-")){
                     System.out.println(message);
                     if (message.contains("[RIS_DATA]")){
                         String risFile = message.substring("[NKC-Javascript-uni][RIS_DATA]".length());
