@@ -1,8 +1,25 @@
 # NewKubikatCatcher
+
 ## About
+
 An automatic RIS downloader for new version of Kubikat, created by SORAMI Miyabitama, under the MIT License.
-This program is only valid for amd64 device with Windows 7 or upper, Linux or MacOS.
+This program is only valid for amd64 device with Windows 7 or upper and Linux.
+This program is comfirmed that it is quite hard to run on the MacOS, so it is regretful that there is no plan to support the MacOS in the future.
+
 ## Way to use
+
+### Run the program
+
+#### On Windows
+
+Just double click the "runNewKubikatCatcher.bat".
+
+#### On Linux
+
+If you have your own JRE or JDK, you can try to run the program with it, but it is recommended that to use the OpenJDK equipped inside the zip file through the terminal.
+
+### After launched
+
 1. Visit the Kubikat, and switch to the **English** version;
 2. Search what you want, and copy the **complete link** of first page of the results, which should be like this:"https://www.kubikat.org/discovery/search?query=title,contains,Cantonese,AND&tab=LibraryCatalog&search_scope=MyInstitution&vid=49MPG_KUBIKAT:VU1&lang=en&mode=advanced&offset=0";
 3. Then, click the bat file of the program;
