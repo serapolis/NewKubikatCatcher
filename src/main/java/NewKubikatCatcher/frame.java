@@ -38,12 +38,8 @@ public class frame {
         JMenuItem nameProjectButton = new JMenuItem("Name the project");
         nameProjectButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                projectName = JOptionPane.showInputDialog(frame, "Please provide with the name of the project:", "Name the project", JOptionPane.PLAIN_MESSAGE);
-                System.out.println("[NKC-Java][INFO]项目名称已设置： " + projectName);
-                if (!projectName.matches("^[a-zA-Z0-9]+$")){
-                    JOptionPane.showMessageDialog(frame, "You should set the name of the project with only Arabic numbers and English letters.", "Error", JOptionPane.ERROR_MESSAGE);
-                    projectName = "";
-                }
+                frameSwingWorkers.setProjectNameSwingWorker setProjectNameSwingWorker = new frameSwingWorkers.setProjectNameSwingWorker(NewKubikatCatcher.frame.frame);
+                setProjectNameSwingWorker.execute();
             }
         });
         menuList.add(nameProjectButton);
@@ -51,23 +47,8 @@ public class frame {
         JMenuItem runButton = new JMenuItem("Run the project");
         runButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                String URL = URLField.getText();
-                if (Objects.equals(projectName, "")){
-                    JOptionPane.showMessageDialog(frame, "You have not set a name for the current project!", "Error", JOptionPane.ERROR_MESSAGE);
-                    return;
-                }
-                if (!URL.contains("&lang=en")){ //如果用户输入的Kubikat链接的页面不是英文版本的，则拒绝之
-                    JOptionPane.showMessageDialog(frame, "You should give me the English version of the Kubikat's Search page!", "Error", JOptionPane.ERROR_MESSAGE);
-                    return;
-                }
-                if (!URL.contains("&offset=")){ //如果用户输入的Kubikat链接的页面没有当前页数，则拒绝之
-                    JOptionPane.showMessageDialog(frame, "You should give me the full link!", "Error", JOptionPane.ERROR_MESSAGE);
-                    return;
-                }
-                URLField.setEnabled(false);
-                JOptionPane.showMessageDialog(frame, "The search will start, and I will downloading RIS files and combine them after the search.", "Info", JOptionPane.PLAIN_MESSAGE);
-                progressBar.setIndeterminate(true);
-                browserObj.runSearch(URL, projectName);
+               frameSwingWorkers.setKubikatURLSwingWorker setKubikatURLSwingWorker = new frameSwingWorkers.setKubikatURLSwingWorker(URLField.getText(), projectName, frame, URLField, progressBar, browserObj);
+               setKubikatURLSwingWorker.execute();
             }
         });
         menuList.add(runButton);
