@@ -19,15 +19,15 @@ You should have your own JRE or JDK, and try to run the program through it.
 
 #### On MacOS
 
-You should launch the bash at first, and then switch to the folder with the program through command "cd", which should be like:
+You should launch the bash terminal at first, and then switch to the folder with the program through command "cd", which should be like:
 
 `` cd ./NewKubikatCatcher ``
 
-If you are not sure with the CPU that your device equippmented, you can try both of ways.
+If you are not sure with the CPU that your device equipped, you can try both of ways.
 
 ##### arm64
 
-Run the code in the bash that you've launched before:
+Run the code in the bash terminal that you've launched before:
 
 `` chmod +x ./Mac_arm_run.sh ``
 
@@ -37,7 +37,7 @@ Then:
 
 ##### amd64
 
-Run the code in the bash that you've launched before:
+Run the code in the bash terminal that you've launched before:
 
 `` chmod +x ./Mac_x64_run.sh ``
 
