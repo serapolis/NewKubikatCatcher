@@ -23,7 +23,7 @@ You should launch the bash at first, and then switch to the folder with the prog
 
 `` cd ./NewKubikatCatcher ``
 
-If you are sure with the CPU that your device equippmented, you can try both of ways.
+If you are not sure with the CPU that your device equippmented, you can try both of ways.
 
 ##### arm64
 
