@@ -3,8 +3,7 @@
 ## About
 
 An automatic RIS downloader for new version of Kubikat, created by SORAMI Miyabitama, under the MIT License.
-This program is only valid for amd64 device with Windows 7 or upper and Linux.
-This program is comfirmed that it is quite hard to run on the MacOS, so it is regretful that there is no plan to support the MacOS in the future.
+This program is only valid for amd64 device with Windows 7 or upper and Linux, MacOS(for both arm64 devices and amd64 devices).
 
 ## Way to use
 
@@ -16,7 +15,35 @@ Just double click the "runNewKubikatCatcher.bat".
 
 #### On Linux
 
-If you have your own JRE or JDK, you can try to run the program with it, but it is recommended that to use the OpenJDK equipped inside the zip file through the terminal.
+You should have your own JRE or JDK, and try to run the program through it.
+
+#### On MacOS
+
+You should launch the bash terminal at first, and then switch to the folder with the program through command "cd", which should be like:
+
+`` cd ./NewKubikatCatcher ``
+
+If you are not sure with the CPU that your device equipped, you can try both of ways.
+
+##### arm64
+
+Run the code in the bash terminal that you've launched before:
+
+`` chmod +x ./Mac_arm_run.sh ``
+
+Then:
+
+`` ./Mac_arm_run.sh ``
+
+##### amd64
+
+Run the code in the bash terminal that you've launched before:
+
+`` chmod +x ./Mac_x64_run.sh ``
+
+Then:
+
+`` ./Mac_x64_run.sh ``
 
 ### After launched
 
