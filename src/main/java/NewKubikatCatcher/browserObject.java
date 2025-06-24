@@ -10,7 +10,11 @@ import org.cef.CefClient;
 import org.cef.CefSettings;
 import org.cef.browser.CefBrowser;
 import org.cef.browser.CefFrame;
+import org.cef.callback.CefBeforeDownloadCallback;
+import org.cef.callback.CefDownloadItem;
+import org.cef.callback.CefDownloadItemCallback;
 import org.cef.handler.CefDisplayHandlerAdapter;
+import org.cef.handler.CefDownloadHandler;
 import org.cef.handler.CefLoadHandlerAdapter;
 import org.cef.network.CefRequest;
 import org.json.JSONObject;
@@ -50,6 +54,20 @@ public class browserObject {
         }
 
         cefClient = cefApp.createClient();
+
+        //JCEF会自动下载blob，这对我们来说是不必要的，且可能招来不同系统的权限问题。
+        cefClient.addDownloadHandler(new CefDownloadHandler() {
+            @Override
+            public boolean onBeforeDownload(CefBrowser cefBrowser, CefDownloadItem cefDownloadItem, String s, CefBeforeDownloadCallback cefBeforeDownloadCallback) {
+                return false;
+            }
+            @Override
+            public void onDownloadUpdated(CefBrowser cefBrowser, CefDownloadItem cefDownloadItem, CefDownloadItemCallback cefDownloadItemCallback) {
+                cefDownloadItemCallback.cancel();
+                System.out.println("[NKC-Java][INFO]JCEF 阻止了一次下载回调");
+            }
+        });
+
         cefBrowser = cefClient.createBrowser("https://kubikat.org", false, false);
     }
     private static void setUpHandlers(){
