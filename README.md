@@ -23,6 +23,8 @@ You should launch the bash terminal at first, and then switch to the folder with
 
 `` cd ./NewKubikatCatcher ``
 
+It is found that the program will meet some problems in the MacOS due to the lack of code-signature, if so, just open the setting panel and choose to trust the program itself and its accompanied executive files.
+
 If you are not sure with the CPU that your device equipped, you can try both of ways.
 
 ##### arm64
