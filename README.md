@@ -9,6 +9,8 @@ This program is only valid for amd64 device with Windows 7 or upper and Linux, M
 
 ### Run the program
 
+It have to be warned that the program is always unavailable during its first running, and when it does go so, just restart it. 
+
 #### On Windows
 
 Just double click the "runNewKubikatCatcher.bat".
@@ -31,14 +33,17 @@ If you are not sure with the CPU that your device equipped, you can try both of 
 
 Run the code in the bash terminal that you've launched before:
 
-`` 
+``
 chmod +x ./Mac_arm_run.sh 
+``
+
+``
 chmod +x ./OpenJDK_24_0_1_mac_arm/bin/java
 ``
 
 Then:
 
-`` ./Mac_arm_run.sh ``
+``./Mac_arm_run.sh ``
 
 ##### amd64
 
@@ -46,12 +51,15 @@ Run the code in the bash terminal that you've launched before:
 
 `` 
 chmod +x ./Mac_x64_run.sh 
+``
+
+``
 chmod +x ./OpenJDK_24_0_1_mac_x64/bin/java
 ``
 
 Then:
 
-`` ./Mac_x64_run.sh ``
+``./Mac_x64_run.sh ``
 
 ### After launched
 
