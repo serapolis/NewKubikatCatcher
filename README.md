@@ -31,7 +31,10 @@ If you are not sure with the CPU that your device equipped, you can try both of 
 
 Run the code in the bash terminal that you've launched before:
 
-`` chmod +x ./Mac_arm_run.sh ``
+`` 
+chmod +x ./Mac_arm_run.sh 
+chmod +x ./OpenJDK_24_0_1_mac_arm/bin/java
+``
 
 Then:
 
@@ -41,7 +44,10 @@ Then:
 
 Run the code in the bash terminal that you've launched before:
 
-`` chmod +x ./Mac_x64_run.sh ``
+`` 
+chmod +x ./Mac_x64_run.sh 
+chmod +x ./OpenJDK_24_0_1_mac_x64/bin/java
+``
 
 Then:
 
