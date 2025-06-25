@@ -119,8 +119,8 @@ public class browserObject {
                     if (message.contains("[RIS_DATA]")){
                         String risFile = message.substring("[NKC-Javascript-uni][RIS_DATA]".length());
                         //下面两次替换掉的符号不能在Zotero中正确处理，故必须替换掉。
-                        risFile = risFile.replace("<<","");
-                        risFile = risFile.replace(">>","");
+                        risFile = risFile.replace("<","");
+                        risFile = risFile.replace(">","");
                         if(risFiles.add(risFile)){
                             System.out.println("[NKC-Java][INFO]该条目已作为第 " + risFiles.size() + " 个条目被记录");
                         }else{
