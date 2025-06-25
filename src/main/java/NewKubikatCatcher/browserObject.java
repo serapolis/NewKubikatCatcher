@@ -58,9 +58,7 @@ public class browserObject {
         //JCEF会自动下载blob，这对我们来说是不必要的，且可能招来不同系统的权限问题。
         cefClient.addDownloadHandler(new CefDownloadHandler() {
             @Override
-            public boolean onBeforeDownload(CefBrowser cefBrowser, CefDownloadItem cefDownloadItem, String s, CefBeforeDownloadCallback cefBeforeDownloadCallback) {
-                return false;
-            }
+            public boolean onBeforeDownload(CefBrowser cefBrowser, CefDownloadItem cefDownloadItem, String s, CefBeforeDownloadCallback cefBeforeDownloadCallback) {return false;}
             @Override
             public void onDownloadUpdated(CefBrowser cefBrowser, CefDownloadItem cefDownloadItem, CefDownloadItemCallback cefDownloadItemCallback) {
                 cefDownloadItemCallback.cancel();
@@ -120,6 +118,9 @@ public class browserObject {
                     System.out.println(message);
                     if (message.contains("[RIS_DATA]")){
                         String risFile = message.substring("[NKC-Javascript-uni][RIS_DATA]".length());
+                        //下面两次替换掉的符号不能在Zotero中正确处理，故必须替换掉。
+                        risFile = risFile.replace("<<","");
+                        risFile = risFile.replace(">>","");
                         if(risFiles.add(risFile)){
                             System.out.println("[NKC-Java][INFO]该条目已作为第 " + risFiles.size() + " 个条目被记录");
                         }else{

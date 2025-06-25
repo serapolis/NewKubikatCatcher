@@ -13,11 +13,13 @@ public class frameSwingWorkers {
         @Override
         protected String doInBackground() {
             projectName = JOptionPane.showInputDialog(frame, "Please provide with the name of the project:", "Name the project", JOptionPane.PLAIN_MESSAGE);
-            System.out.println("[NKC-Java][INFO]项目名称已设置： " + projectName);
+            System.out.println("[NKC-Java][INFO]项目名称拟设置为： " + projectName);
             if (!projectName.matches("^[a-zA-Z0-9]+$")) {
                 JOptionPane.showMessageDialog(frame, "You should set the name of the project with only Arabic numbers and English letters.", "Error", JOptionPane.ERROR_MESSAGE);
                 projectName = "";
+                return null;
             }
+            System.out.println("[NKC-Java][INFO]项目名称已设置为： " + projectName);
             JOptionPane.showMessageDialog(frame, "The project should be named as:" + projectName, "The project named", JOptionPane.PLAIN_MESSAGE);
             NewKubikatCatcher.frame.projectName = this.projectName;
             return null;

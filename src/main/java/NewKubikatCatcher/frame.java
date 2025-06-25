@@ -59,7 +59,7 @@ public class frame {
         JButton aboutButton = new JButton("About");
         aboutButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(frame, "NewKubikatCatcher(V1.6), by SORAMI Miyabitama, \nwhich is under the MIT license, adopting those open-sourse softweres:\nOpenJDK\nJCEF\nJSON-java", "About", JOptionPane.PLAIN_MESSAGE);
+                JOptionPane.showMessageDialog(frame, "NewKubikatCatcher(V1.7), by SORAMI Miyabitama, \nwhich is under the MIT license, adopting those open-sourse softweres:\nOpenJDK\nJCEF\nJSON-java", "About", JOptionPane.PLAIN_MESSAGE);
             }
         });
         toolBar.add(aboutButton);
