@@ -2,7 +2,7 @@
 
 ## About
 
-An automatic RIS downloader for new version of Kubikat, created by SORAMI Miyabitama, under the MIT License.
+An automatic RIS downloader for the new version of Kubikat, created by SORAMI Miyabitama, under the MIT License.
 This program is only valid for amd64 device with Windows 7 or upper and Linux, MacOS(for both arm64 devices and amd64 devices).
 
 ## Way to use
