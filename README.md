@@ -63,7 +63,7 @@ Then:
 
 ### After launched
 
-1. Visit the Kubikat, and switch to the **English** version;
+1. Visit the Kubikat;
 2. Search what you want, and copy the **complete link** of first page of the results, which should be like this:"https://www.kubikat.org/discovery/search?query=title,contains,Cantonese,AND&tab=LibraryCatalog&search_scope=MyInstitution&vid=49MPG_KUBIKAT:VU1&lang=en&mode=advanced&offset=0";
 3. Then, click the bat file of the program;
 4. Click "Opreations", and then choose "Name the project", name the project;
