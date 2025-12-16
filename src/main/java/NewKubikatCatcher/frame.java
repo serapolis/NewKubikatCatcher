@@ -80,8 +80,8 @@ public class frame {
         mainPanel.add(topPanel, BorderLayout.NORTH);
 
         // 将浏览器组件添加到 mainPanel 的中心
-        if (browserObj != null && browserObject.cefBrowser != null) {
-            mainPanel.add(browserObject.cefBrowser.getUIComponent(), BorderLayout.CENTER);
+        if (browserObj != null && browserObj.cefBrowser != null) {
+            mainPanel.add(browserObj.cefBrowser.getUIComponent(), BorderLayout.CENTER);
         } else {
             // 处理 browserObj 或 cefBrowser 为 null 的情况，例如添加一个占位符
             mainPanel.add(new JLabel("Browser component is not available."), BorderLayout.CENTER);
