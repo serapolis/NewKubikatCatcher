@@ -20,7 +20,7 @@ public class frameSwingWorkers {
                 return null;
             }
             System.out.println("[NKC-Java][INFO]项目名称已设置为： " + projectName);
-            JOptionPane.showMessageDialog(frame, "The project should be named as:" + projectName, "The project named", JOptionPane.PLAIN_MESSAGE);
+            JOptionPane.showMessageDialog(frame, "The project should be named as: " + projectName, "The project named", JOptionPane.PLAIN_MESSAGE);
             NewKubikatCatcher.frame.projectName = this.projectName;
             return null;
         }
@@ -46,9 +46,18 @@ public class frameSwingWorkers {
                 JOptionPane.showMessageDialog(frame, "You have not set a name for the current project!", "Error", JOptionPane.ERROR_MESSAGE);
                 return null;
             }
-            if (!URL.contains("&lang=en")){ //如果用户输入的Kubikat链接的页面不是英文版本的，则拒绝之
-                JOptionPane.showMessageDialog(frame, "You should give me the English version of the Kubikat's Search page!", "Error", JOptionPane.ERROR_MESSAGE);
-                return null;
+            if (!URL.contains("&lang=en")){ //如果用户输入的Kubikat链接的页面不是英文版本的，尝试自动修改；用户拒绝自动修改的，则拒绝之
+                int isAutomaticallyTurnToEnglishPage = JOptionPane.showConfirmDialog(frame, "It seems that you give a one of the other versions of the Kubikat's Search page. Try to automatically correct to the English version?", "Confirm", JOptionPane.YES_NO_OPTION);
+                if (isAutomaticallyTurnToEnglishPage == JOptionPane.YES_OPTION) {
+                    URL = URL.replace("&lang=de", "");
+                    URL = URL.replace("&lang=it", "");
+                    URL = URL.replace("&lang=fr", "");
+                    URL = URL + "&lang=en";
+                    JOptionPane.showMessageDialog(frame, "The link should be corrected automatically. Now the link is: \n" + URL, "Info", JOptionPane.PLAIN_MESSAGE);
+                } else {
+                    JOptionPane.showMessageDialog(frame, "You should give me the English version of the Kubikat's Search page!", "Error", JOptionPane.ERROR_MESSAGE);
+                    return null;
+                }
             }
             if (!URL.contains("&offset=")){ //如果用户输入的Kubikat链接的页面没有当前页数，则拒绝之
                 JOptionPane.showMessageDialog(frame, "You should give me the full link!", "Error", JOptionPane.ERROR_MESSAGE);

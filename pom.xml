@@ -6,7 +6,7 @@
 
     <groupId>NewKubikatCatcher</groupId>
     <artifactId>NewKubikatCatcher</artifactId>
-    <version>1.7</version>
+    <version>1.8</version>
 
     <properties>
         <maven.compiler.source>23</maven.compiler.source>
@@ -18,27 +18,27 @@
         <dependency>
             <groupId>me.friwi</groupId>
             <artifactId>jcefmaven</artifactId>
-            <version>135.0.20</version>
+            <version>141.0.10</version>
         </dependency>
         <dependency>
             <groupId>me.friwi</groupId>
             <artifactId>jcef-natives-linux-amd64</artifactId>
-            <version>jcef-ca49ada+cef-135.0.20+ge7de5c3+chromium-135.0.7049.85</version>
+            <version>jcef-2caef5a+cef-141.0.10+g1d65b0d+chromium-141.0.7390.123</version>
         </dependency>
         <dependency>
             <groupId>me.friwi</groupId>
             <artifactId>jcef-natives-windows-amd64</artifactId>
-            <version>jcef-ca49ada+cef-135.0.20+ge7de5c3+chromium-135.0.7049.85</version>
+            <version>jcef-2caef5a+cef-141.0.10+g1d65b0d+chromium-141.0.7390.123</version>
         </dependency>
         <dependency>
             <groupId>me.friwi</groupId>
             <artifactId>jcef-natives-macosx-amd64</artifactId>
-            <version>jcef-ca49ada+cef-135.0.20+ge7de5c3+chromium-135.0.7049.85</version>
+            <version>jcef-2caef5a+cef-141.0.10+g1d65b0d+chromium-141.0.7390.123</version>
         </dependency>
         <dependency>
             <groupId>me.friwi</groupId>
             <artifactId>jcef-natives-macosx-arm64</artifactId>
-            <version>jcef-ca49ada+cef-135.0.20+ge7de5c3+chromium-135.0.7049.85</version>
+            <version>jcef-2caef5a+cef-141.0.10+g1d65b0d+chromium-141.0.7390.123</version>
         </dependency>
 
         <dependency>
@@ -72,7 +72,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>NewKubikatCatcher.main</mainClass> <!-- 改成你自己的主类 -->
+                            <mainClass>NewKubikatCatcher.main</mainClass>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
                         </manifest>

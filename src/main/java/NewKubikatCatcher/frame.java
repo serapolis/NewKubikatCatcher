@@ -5,7 +5,6 @@ import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Objects;
 
 public class frame {
 
@@ -59,7 +58,7 @@ public class frame {
         JButton aboutButton = new JButton("About");
         aboutButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(frame, "NewKubikatCatcher(V1.7), by SORAMI Miyabitama, \nwhich is under the MIT license, adopting those open-sourse softweres:\nOpenJDK\nJCEF\nJSON-java", "About", JOptionPane.PLAIN_MESSAGE);
+                JOptionPane.showMessageDialog(frame, "NewKubikatCatcher(V1.8), by SORAMI Miyabitama, \nwhich is under the MIT license, adopting those open-sourse softweres:\nOpenJDK\nJCEF\nJSON-java", "About", JOptionPane.PLAIN_MESSAGE);
             }
         });
         toolBar.add(aboutButton);
@@ -81,8 +80,8 @@ public class frame {
         mainPanel.add(topPanel, BorderLayout.NORTH);
 
         // 将浏览器组件添加到 mainPanel 的中心
-        if (browserObj != null && browserObj.cefBrowser != null) {
-            mainPanel.add(browserObj.cefBrowser.getUIComponent(), BorderLayout.CENTER);
+        if (browserObj != null && browserObject.cefBrowser != null) {
+            mainPanel.add(browserObject.cefBrowser.getUIComponent(), BorderLayout.CENTER);
         } else {
             // 处理 browserObj 或 cefBrowser 为 null 的情况，例如添加一个占位符
             mainPanel.add(new JLabel("Browser component is not available."), BorderLayout.CENTER);
